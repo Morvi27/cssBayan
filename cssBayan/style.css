@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+
+    background-color: antiquewhite;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+.wrapper {
+    max-width: 50%;
+    margin: 2% auto;
+}
+
+.accordion-item {
+    border-top: 0.1em solid #a86d74
+}
+
+.accordion-title {
+    padding: 1% 1.5%;
+    display: block;
+    color: #916161;
+    cursor: pointer;
+    position: relative;   
+}
+
+.accordion-title:after {
+    content: "";
+    
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #231214
+    transparent transparent 
+    transparent;
+    position: absolute;
+    top: 50%;
+    right: 1.5%;
+
+    transform: translateY(-50%);
+
+}
+
+@media (hover: hover) {
+    .accordion-title:hover {
+        color: #231214;  
+    }
+
+}
+
+
+.accordion-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    position: absolute;
+}
+
+.accordion-input:checked ~ .accordion-title{
+    color: #231214;
+}
+
+.accordion-input:checked ~ .accordion-title {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent
+    transparent #231214
+    transparent;
+}
+@media (hover: hover) {
+    .accordion-input:hover + .accordion-meme {
+        display: block;
+        opacity:1;
+        transition: 1s;
+    }
+  }
+
+.accordion-input:checked + .accordion-meme {
+    display: block;
+    opacity:1;
+    transition: 1s;
+}
+
+.accordion-meme {
+    opacity:1;
+    transition: 1s;
+    padding: 1% 1.5%;
+    display: none;
+    
+}
+
+img {
+    width: 60%;
+    height: 80%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px ) {
+    body {
+        font-size: 12px;
+        }
+};
+
+@media only screen and (max-width: 800px) {
+    body {
+    font-size: 8px;
+    }
+};
+
+@media only screen and (max-width: 500px ) {
+    body {
+        font-size: 6px;
+        }
+};
+
